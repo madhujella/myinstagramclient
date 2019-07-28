@@ -1,11 +1,14 @@
 import React from 'react';
 import NavigationBar from './Navigationbar';
+import Container from 'react-bootstrap/Container';
 
 const Layout = (props) => {
     return (
         <div>
             <NavigationBar />
-            {props.children}
+            <Container className="marginTop">
+                    {props.children}
+            </Container>
         </div>
     )
 }

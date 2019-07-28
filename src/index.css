@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.marginTop {
+  margin-top: 80px;
+}
+
+.mainBg {
+  background: url('./landingImage.jpg');
+  background-size: cover;
+}
+
+.lpContent {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  top: 100px;
+}

@@ -5,11 +5,13 @@ import Layout from './Layout';
 
 const LandingPage = (props) => {
     return (
-        <Layout>
-            <h2>Click To --->></h2>
-            <Link to="/register">Sign Up</Link>
-            <Link to="/login">Login</Link>
-        </Layout>
+        <div className="mainBg" style={{ height: window.innerHeight + 'px' }}>
+            <div className="lpContent">
+                <h2 className="text-center">myInstagram</h2>
+                <Link to="/signup">Sign Up</Link>
+                <Link to="/login">Login</Link>
+            </div>
+        </div>
     )
 }
 

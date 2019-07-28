@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useReactRouter from 'use-react-router';
 import { useSelector, useDispatch } from 'react-redux';
-import { COUNTER } from '../store/actions';
+import { COUNTER } from '../store/actionTypes';
 
 const inc = () => {
     return {type: COUNTER}
