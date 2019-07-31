@@ -28,4 +28,21 @@ code {
   background: #fff;
   position: relative;
   top: 100px;
+  text-align: center;
+}
+
+.noPosts {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.post {
+  padding: 5px;
+  margin: 5px;
+}
+
+.postContainer{
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 1px #eee;
+  margin: 50px 13%;
 }

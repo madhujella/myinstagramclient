@@ -7,3 +7,5 @@ export const user = server + '/user';
 export const post = server + '/photo';
 export const editprofile = server + '/editprofile';
 export const favorite = server + '/fav';
+
+export const imageServer = `${server}/images`;

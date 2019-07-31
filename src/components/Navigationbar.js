@@ -2,18 +2,20 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import { connect } from 'react-redux';
 
 const Navigationbar = (props) => {
 
-    let isLoggedIn = false;
     let navLinks = null;
-    if (isLoggedIn) {
+    if (props.isLoggedIn) {
         navLinks = (
-            <Nav>
-                <Nav.Link href="/mainpage">me</Nav.Link>
-                <Nav.Link href="/settings">settings</Nav.Link>
-                <Nav.Link href="/">logout</Nav.Link>
-            </Nav>
+            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                <Nav>
+                    <Nav.Link href="/mainpage">me</Nav.Link>
+                    <Nav.Link href="/logout">logout</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+
         )
     }
 
@@ -21,14 +23,17 @@ const Navigationbar = (props) => {
         <Navbar fixed="top" bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="/">MyInstagram</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                    {navLinks}
-                </Navbar.Collapse>
-
+                {props.isLoggedIn ? <Navbar.Toggle aria-controls="basic-navbar-nav" /> : null}
+                {navLinks}
             </Container>
         </Navbar>
     )
 }
 
-export default Navigationbar;
+const mapStateToProps = (state) => {
+    return {
+        isLoggedIn: state.isLoggedIn
+    }
+}
+
+export default connect(mapStateToProps, null)(Navigationbar);
